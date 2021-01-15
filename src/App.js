@@ -6,12 +6,13 @@ import Landing from './Components/Layout/Landing';
 import Register from './Components/Layout/Register';
 import Login from './Components/Layout/Login';
 import Dashboard from './Components/Layout/Dashboard';
+import AddExperience from './Components/Layout/AddExperience';
 import CreateProfile from './Components/Layout/CreateProfile';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser } from './actions/authAction';
 import store from './store';
-import { logoutUser} from './actions/authAction'
+import { logoutUser } from './actions/authAction'
 
 
 if(localStorage.jwtToken) {
@@ -59,6 +60,11 @@ function App() {
         <Route path='/create-profile' exact>
           <Navbar />
           <CreateProfile />
+        </Route>
+
+        <Route path='/add-experience' exact>
+          <Navbar />
+          <AddExperience />
         </Route>
       </Switch>
     </Router>

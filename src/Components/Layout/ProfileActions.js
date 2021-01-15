@@ -7,7 +7,7 @@ export default function ProfileActions() {
         <div>
             {/* button for deleting the profile */}
             <Link to=''>Edit Profile</Link>
-            <Link to=''>Add Experience</Link>
+            <Link to='/add-experience'>Add Experience</Link>
             <Link to=''>Add Education</Link>
         </div>
     )

@@ -6,6 +6,8 @@ import {useEffect} from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import store from "../../store";
 import ProfileActions from './ProfileActions';
+import Experience from './Experience';
+
  
 function Dashboard() {
     const dispatch = useDispatch();
@@ -33,6 +35,7 @@ function Dashboard() {
                 <div>
                     <h4>{profile.handle}</h4>
                     <ProfileActions />
+                    <Experience />
                     <button onClick={onDeleteClick}>Delete Account</button>
                 </div>
             )

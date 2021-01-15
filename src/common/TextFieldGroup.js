@@ -5,6 +5,7 @@ export default function TextFieldGroup(props) {
         <div>
             <input 
                 placeholder = {props.placeholder}
+                type = {props.type}
                 name = {props.name}
                 value = {props.value}
                 onChange = {props.onChange}

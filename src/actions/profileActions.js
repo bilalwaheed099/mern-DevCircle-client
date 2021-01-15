@@ -51,6 +51,28 @@ export const createProfile = (profileData, history, dispatch) => {
             })
         });
 }
+
+// Add experience
+export const addExperience = (expObj, history, dispatch) => {
+    axios
+    .post('/api/profile/add-experience', expObj)
+    .then(res => {
+        console.log(res);
+        history.push('/dashboard');
+    }).catch(err => {
+        dispatch({
+            type: 'GET_ERRORS',
+            paylaod: err.response.data
+        });
+    })
+
+}
+
+
+
+
+
+
 // Delete current account 
 export const deleteAccount = (dispatch) => {
     if(window.confirm("Are you sure? This can NOT be undone!")){
